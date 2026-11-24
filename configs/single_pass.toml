@@ -1,0 +1,8 @@
+# Ablation: one research round, no verification, no abstention (answer the top candidate).
+name = "single_pass"
+description = "Ablation: single pass, no verification, no abstention"
+retriever = "learned"
+max_research_rounds = 1
+verify = false
+abstain = false
+use_llm = false

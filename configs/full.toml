@@ -1,0 +1,19 @@
+# Full multi-agent system, offline: learned retriever + deterministic agent backends.
+# Thresholds start from the values the earlier FinEvidence agent chose on train; the
+# research loop (docs/research-loop.md) re-tunes them on train only.
+name = "full"
+description = "All eight agents: iterative research, audit, verification and abstention"
+retriever = "learned"
+initial_k = 5
+k_step = 5
+max_research_rounds = 3
+min_relevance = 0.25
+strict_units = true
+max_candidates = 12
+verify = true
+abstain = true
+min_confidence = 0.60
+ambiguity_margin = 0.01
+abstain_on_conflict = true
+period_mismatch_penalty = 0.6
+use_llm = false

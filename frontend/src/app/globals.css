@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Workpaper palette: cool paper, navy ink, ledger green for verified figures,
+   red pencil for tick marks and abstentions, highlighter for cited cells. */
+:root {
+  --paper: #f6f7f5;
+  --sheet: #ffffff;
+  --ink: #18263a;
+  --ink-soft: #4d5a6b;
+  --ink-faint: #6b7684;
+  --rule: #d9ddd8;
+  --rule-strong: #b9c0b8;
+  --ledger: #2e6a4f;
+  --ledger-wash: #e4efe8;
+  --pencil: #b42318;
+  --pencil-wash: #fbe9e7;
+  --highlight: #f2e59a;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-sheet: var(--sheet);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-ledger: var(--ledger);
+  --color-ledger-wash: var(--ledger-wash);
+  --color-pencil: var(--pencil);
+  --color-pencil-wash: var(--pencil-wash);
+  --color-highlight: var(--highlight);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-plex-sans), system-ui, sans-serif;
+  font-feature-settings: "tnum" 1;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ledger);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

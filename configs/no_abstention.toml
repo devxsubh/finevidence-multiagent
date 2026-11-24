@@ -1,0 +1,8 @@
+# Ablation: iterative research and verification, but always answer with the best candidate.
+name = "no_abstention"
+description = "Ablation: full loop, but never abstains"
+retriever = "learned"
+max_research_rounds = 3
+verify = true
+abstain = false
+use_llm = false

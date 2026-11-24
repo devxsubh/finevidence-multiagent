@@ -1,0 +1,6 @@
+# Retrieval ablation: the full system with BM25 instead of the learned reranker.
+name = "full_bm25"
+description = "Full system with the BM25 retriever (no trained component)"
+retriever = "bm25"
+min_confidence = 0.60
+use_llm = false

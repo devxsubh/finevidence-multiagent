@@ -1,0 +1,19 @@
+# Candidate accepted by the research loop. Promote it only with human approval.
+name = "R20261124-163148-H1-confidence-up"
+description = "Raising the confidence threshold removes wrong answers faster than correct ones. (variant of full)"
+retriever = "learned"
+initial_k = 5
+k_step = 5
+max_research_rounds = 3
+min_relevance = 0.25
+strict_units = true
+max_candidates = 12
+verify = true
+abstain = true
+min_confidence = 0.7
+ambiguity_margin = 0.01
+abstain_on_conflict = true
+period_mismatch_penalty = 0.6
+use_llm = false
+llm_agents = ["query_analyst", "reasoning", "response"]
+llm_model = "claude-opus-5-5"
